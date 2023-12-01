@@ -1,0 +1,88 @@
+<div class="container py-5 px-5 row g-3">
+
+    <div class="col-8">
+      <label for="validationCustom01" class="form-label"> ID de la proyección:</label>
+      <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly [(ngModel)]="nuevaProyeccion.id" name="id">
+    </div>
+
+    <div class="col-4 form-group">
+      <label for="tipoProyecto" class="form-label" value="Disabled readonly input">Tipo de proyecto:</label>
+      <select disabled readonly class="form-control" id="tipoProyecto" name="tipoProyecto" required [(ngModel)]="nuevaProyeccion.tipoProyeccion">
+        <option value="" disabled selected>Selecciona un curso</option>
+        <option *ngFor="let item of tiposProyeccion" [ngValue]="item">{{ item.tipoProyeccion }}</option>
+      </select>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+
+    <div class="col-12">
+      <label for="validationCustom01" class="form-label" value="Disabled readonly input">Nombre de la proyección:</label>
+      <input disabled readonly type="text" class="form-control" id="validationCustom01" [(ngModel)]="nuevaProyeccion.nombreProyeccion" name="nombreProyeccion" required>
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="descripcion" class="form-label" value="Disabled readonly input">Descripción:</label>
+      <textarea disabled readonly id="descripcion" name="descripcion" [(ngModel)]="nuevaProyeccion.descripcion" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="eje" class="form-label" > Eje estratégico:</label>
+      <textarea disabled readonly id="eje" name="eje" [(ngModel)]="nuevaProyeccion.ejeEstrategico" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="objetivo" class="form-label">Objetivo:</label>
+      <textarea disabled readonly id="objetivo" name="objetivo" [(ngModel)]="nuevaProyeccion.objetivo" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="zona" class="form-label">Zona de intervención:</label>
+      <textarea disabled readonly id="zona" name="zona" [(ngModel)]="nuevaProyeccion.zonaIntervencion" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="archivoAdjunto" class="form-label">Archivo Adjunto:</label>
+      <input disabled readonly type="text" id="archivoAdjunto" name="archivoAdjunto" [(ngModel)]="nuevaProyeccion.archivoAdjunto" class="form-control" required>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <!-- Otros campos del formulario -->
+
+    <div class="col-6">
+      <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+      <input disabled readonly type="date" class="form-control" id="fechaInicio" [(ngModel)]="nuevaProyeccion.fechaInicio" name="fechaInicio" required>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="col-6">
+      <label for="fechaTermino" class="form-label">Fecha de término:</label>
+      <input disabled readonly type="date" class="form-control" id="fechaTermino" [(ngModel)]="nuevaProyeccion.fechaTermino" name="fechaTermino" required>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+<!-- Lista de cursos filtrados -->
+<div class="col-md-4 form-group">
+  <label for="curso">Curso</label>
+  <select disabled readonly class="form-control" id="curso" name="curso" required [(ngModel)]="nuevaProyeccion.cursoDocente">
+    <option value="" disabled selected>Selecciona un curso</option>
+    <option *ngFor="let item of cursosDocente" [value]="item.curso">{{ item.curso.curso }}</option>
+  </select>
+  <div class="invalid-feedback">Este campo es requerido.</div>
+</div>
+
+</div>
+
+ <!-- <div class="col-4 form-group">
+      <label for="estado">Categoría:</label>
+      <select class="form-control" id="estado" name="estado" required [(ngModel)]="nuevaProyeccion.estadoProyeccion">
+        <option value="" disabled selected>Selecciona un estado</option>
+        <option *ngFor="let item of estadosProyeccion" [value]="item">{{ item.estadoProyeccion }}</option>
+      </select>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div> -->

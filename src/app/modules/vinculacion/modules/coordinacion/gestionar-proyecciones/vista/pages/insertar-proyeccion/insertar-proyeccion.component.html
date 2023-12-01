@@ -1,0 +1,85 @@
+<div class="container py-5 px-5">
+  <form (ngSubmit)="agregarProyeccion()" class="row g-3 needs-validation" novalidate>
+
+    <div class="col-8">
+      <label for="validationCustom01" class="form-label">Nombre de la proyección:</label>
+      <input type="text" class="form-control" id="validationCustom01" [(ngModel)]="nuevaProyeccion.nombreProyeccion" name="nombreProyeccion" required>
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="col-4 form-group">
+      <label for="tipoProyecto" class="form-label">Tipo de proyecto:</label>
+      <select class="form-control" id="tipoProyecto" name="tipoProyecto" required [(ngModel)]="nuevaProyeccion.tipoProyeccion">
+        <option value="" disabled selected>Selecciona un tipo</option>
+        <option *ngFor="let item of tiposProyeccion" [ngValue]="item">{{ item.tipoProyeccion }}</option>
+      </select>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" [(ngModel)]="nuevaProyeccion.descripcion" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="eje" class="form-label">Eje estratégico:</label>
+      <textarea id="eje" name="eje" [(ngModel)]="nuevaProyeccion.ejeEstrategico" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="objetivo" class="form-label">Objetivo:</label>
+      <textarea id="objetivo" name="objetivo" [(ngModel)]="nuevaProyeccion.objetivo" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="zona" class="form-label">Zona de intervención:</label>
+      <textarea id="zona" name="zona" [(ngModel)]="nuevaProyeccion.zonaIntervencion" class="form-control" required></textarea>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="archivoAdjunto" class="form-label">Archivo Adjunto:</label>
+      <input type="file" id="archivoAdjunto" name="archivoAdjunto" [(ngModel)]="nuevaProyeccion.archivoAdjunto" class="form-control" required>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <!-- Otros campos del formulario -->
+
+    <div class="col-3">
+      <label for="fechaInicio" class="form-label">Fecha de inicio:</label>
+      <input type="date" class="form-control" id="fechaInicio" [(ngModel)]="nuevaProyeccion.fechaInicio" name="fechaInicio" required>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="col-3">
+      <label for="fechaTermino" class="form-label">Fecha de término:</label>
+      <input type="date" class="form-control" id="fechaTermino" [(ngModel)]="nuevaProyeccion.fechaTermino" name="fechaTermino" required>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label for="curso" class="form-label">Curso</label>
+      <select class="form-control" id="curso" name="curso" required [(ngModel)]="nuevaProyeccion.cursoDocente">
+        <option value="" disabled selected>Selecciona un tipo</option>
+        <option *ngFor="let item of cursosDocente" [ngValue]="item">{{ item.curso.curso }}</option>
+      </select>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <!-- <div class="col-md-4 form-group">
+      <label for="categoria">Categoría:</label>
+      <select class="form-control" id="categoria" name="categoria" required [(ngModel)]="nuevaProyeccion.estadoProyeccion">
+        <option value="" disabled selected>Selecciona una categoría</option>
+        <option *ngFor="let item of estadosProyeccion" [ngValue]="item">{{ item.estadoProyeccion }}</option>
+      </select>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div> -->
+
+    <button type="submit" class="btn btn-primary" >Agregar proyección</button>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link" id="nav-listarLibro-tab"  type="button" role="tab"  aria-selected="true" [routerLink]="['/vinculacion/home-coordinacion/gestionarProyeccion/listarProyeccion']" routerLinkActive="active">Listar proyecciones</button>
+    <button class="nav-link" id="nav-insertarLibro-tab"  type="button" role="tab" aria-selected="false" [routerLink]="['/vinculacion/home-coordinacion/gestionarProyeccion/insertarProyeccion']" routerLinkActive="active">Insertar proyecciones</button>
+    <button class="nav-link disabled" id="nav-actualizarLibro-tab"  type="button" role="tab" aria-selected="false" [routerLink]="['/vinculacion/home-coordinacion/gestionarProyeccion/editarProyeccion']" routerLinkActive="active">Actualizar proyecciones</button>
+    <button class="nav-link disabled" id="nav-mostrarLibro-tab"  type="button" role="tab" aria-selected="false" [routerLink]="['/vinculacion/home-coordinacion/gestionarProyeccion/mostrarProyeccion']" routerLinkActive="active">Ver detalles</button>
+  </div>
+</nav>
+<router-outlet></router-outlet>
